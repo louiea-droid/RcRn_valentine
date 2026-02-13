@@ -19,6 +19,18 @@
   overflow: hidden;
 }
 
+.valentine-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(33, 0, 12, 0.18) 0%, rgba(33, 0, 12, 0.52) 68%),
+    url('/images.png') center / min(72vw, 560px) no-repeat;
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .valentine-page.celebration-on {
   animation: celebration-bg 2.8s ease-in-out infinite;
 }
@@ -88,6 +100,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
 }
 
 .intro-pending .love-card {
